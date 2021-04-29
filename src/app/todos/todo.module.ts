@@ -9,9 +9,11 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoPageComponent } from './todo-page.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { FiltrosPipe } from '../pipes/filtros.pipe';
+
 
 @NgModule({
-  declarations: [TodoAddComponent, TodoFooterComponent, TodoItemComponent, TodoListComponent, TodoPageComponent],
+  declarations: [TodoAddComponent, TodoFooterComponent, TodoItemComponent, TodoListComponent, TodoPageComponent, FiltrosPipe],
   imports: [
     CommonModule,
     TodoRoutingModule,
@@ -21,3 +23,4 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   exports: [TodoPageComponent]
 })
 export class TodoModule { }
+ 

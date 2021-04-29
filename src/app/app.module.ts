@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { todoReducer } from './todos/todo.reducer';
+import { appReducers } from './app.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     TodoModule,
-    StoreModule.forRoot({ todos: todoReducer }, {
+    StoreModule.forRoot(appReducers, {
       runtimeChecks: {
         strictStateImmutability: false,
         strictActionImmutability: false,

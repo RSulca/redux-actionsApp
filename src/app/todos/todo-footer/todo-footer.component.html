@@ -1,18 +1,15 @@
 <footer class="footer">
-    <!-- This should be `0 items left` by default -->
-    <span class="todo-count"><strong>0</strong> item left</span>
-    <!-- Remove this if you don't implement routing -->
+    <span class="todo-count"><strong>{{pendientes}}</strong> item left</span>
     <ul class="filters">
         <li>
-            <a class="selected" href="#/">All</a>
+            <a [class.selected]="'todos'===tipos" (click)="filter('todos')">All</a>
         </li>
         <li>
-            <a href="#/active">Active</a>
+            <a [class.selected]="'pendientes'===tipos" (click)="filter('pendientes')">Active</a>
         </li>
         <li>
-            <a href="#/completed">Completed</a>
+            <a [class.selected]="'completados'===tipos" (click)="filter('completados')">Completed</a>
         </li>
     </ul>
-    <!-- Hidden if no completed items are left ↓ -->
-    <button class="clear-completed">Clear completed</button>
+    <button (click)="deleteAll()" class="clear-completed">Clear completed</button>
 </footer>
